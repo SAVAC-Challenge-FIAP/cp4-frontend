@@ -1,0 +1,181 @@
+:root {
+    --eco-ink: #000000;
+    --eco-surface: #FFFFFF;
+    --eco-border: #DDDDDD;
+    --eco-green: #2F6B3B;
+
+    --eco-font: "Styrene A Web", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --eco-text-size: 13px;
+    --eco-text-line: 20px;
+
+    --eco-header-pad-y: 18px;
+    --eco-header-pad-x: 32px;
+    --eco-container-max: 1280px;
+}
+
+body {
+    font-family: var(--eco-font);
+}
+
+/* Container padrão do site: mesma largura máxima do header */
+.eco-container {
+    width: 100%;
+    max-width: var(--eco-container-max);
+    margin-inline: auto;
+    padding-left: var(--eco-header-pad-x);
+    padding-right: var(--eco-header-pad-x);
+    box-sizing: border-box;
+}
+
+.eco-header {
+    background-color: var(--eco-surface);
+}
+
+.eco-navbar {
+    background-color: var(--eco-surface);
+    border-bottom: 1px solid var(--eco-border);
+    padding: 0;
+}
+
+.eco-navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    max-width: var(--eco-container-max);
+    margin-inline: auto;
+    padding: var(--eco-header-pad-y) var(--eco-header-pad-x);
+    box-sizing: border-box;
+}
+
+/* ---- Logo ---- */
+.eco-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    color: var(--eco-ink);
+}
+
+.eco-logo__leaf {
+    display: block;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: var(--eco-green);
+}
+
+.eco-logo__text {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    color: var(--eco-ink);
+}
+
+/* ---- Menu ---- */
+.eco-menu {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 16px;
+}
+
+.eco-menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 21px !important;
+    font-size: var(--eco-text-size);
+    line-height: var(--eco-text-line);
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+    color: var(--eco-ink) !important;
+}
+
+.eco-menu__item:hover,
+.eco-menu__item:focus-visible {
+    opacity: 0.6;
+}
+
+/* ---- Bloco direito: ícones ---- */
+.eco-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.eco-icons__link {
+    display: flex;
+    align-items: center;
+    height: var(--eco-text-line);
+    color: var(--eco-ink);
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+.eco-icons__link:hover,
+.eco-icons__link:focus-visible {
+    color: var(--eco-ink);
+    opacity: 0.6;
+}
+
+.eco-icons__group {
+    gap: 4px;
+}
+
+.eco-icon {
+    display: block;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.eco-icons__text,
+.eco-icons__count {
+    font-size: var(--eco-text-size);
+    line-height: var(--eco-text-line);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* ========= Mobile ========= */
+@media screen and (max-width: 991.98px) {
+    :root {
+        --eco-header-pad-x: 16px;
+    }
+
+    .eco-navbar__inner {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .eco-menu {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-top: 1px solid var(--eco-border);
+        padding-top: 8px;
+    }
+
+    .eco-menu__item {
+        padding: 6px 14px !important;
+    }
+
+    .eco-hide-sm {
+        display: none;
+    }
+}
