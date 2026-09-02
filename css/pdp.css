@@ -1,0 +1,79 @@
+:root {
+    --eco-ink: #000000;
+    --eco-surface: #FFFFFF;
+    --eco-border: #DDDDDD;
+    --eco-green: #2F6B3B;
+    --eco-cream: #F5F4F4;
+
+    --eco-font: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --eco-text-size: 13px;
+    --eco-text-line: 20px;
+
+    --eco-gutter: 32px;
+    --eco-gutter-sm: 16px;
+    --eco-container-max: 1280px;
+}
+
+body {
+    font-family: var(--eco-font);
+}
+
+p{
+    margin-left: 10px;
+}
+
+.produto-img{
+    width: 100%;
+}
+
+.categoria{
+    color: gray;
+    margin-top: 20px;
+    font-size: var(--eco-text-size);
+    margin-left: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: var(--eco-gutter-sm);
+}
+
+.descricao {
+    color: var(--eco-ink);
+    margin-top: 20px;
+    font-size: var(--eco-text-size);
+    margin-left: 10px;
+}
+
+.cores{
+    margin-left: 10px;
+    color: #ffffff00;
+}
+
+.cores>*{
+    border-radius: 100%;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.cor1{
+    background-color:var(--eco-cream);
+}
+
+.cor2 {
+    background-color: var(--eco-ink);
+}
+
+.cor3 {
+    background-color: rgb(107, 107, 236);
+}
+
+.tamanhos{
+    margin-left: 10px;
+}
+
+.btn-carrinho{
+    margin-left: 10px;
+}
+
+
