@@ -16,6 +16,7 @@
 
 body {
     font-family: var(--eco-font);
+    overflow-x: clip;
 }
 
 .container {
@@ -220,6 +221,15 @@ body {
     color: var(--eco-ink);
 }
 
+.eco-product__detail .btn {
+    min-width: 0;
+    height: auto;
+    margin-top: 8px;
+    padding-block: 9px;
+    font-size: 12px;
+    white-space: normal;
+}
+
 .eco-quote {
     background-color: var(--eco-cream);
 }
@@ -391,44 +401,16 @@ body {
     }
 }
 
-/* ============================= FILTRO LATERAL (categorias) ============================= */
-.eco-filterbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--eco-border);
+/* ============================= FILTRO (categorias) ============================= */
+.eco-filter {
+    padding-right: 24px;
 }
 
-.eco-filter.offcanvas {
-    --bs-offcanvas-width: 340px;
-    background-color: var(--eco-surface);
-}
-
-.eco-filter .offcanvas-header {
-    padding: 16px 24px;
-    border-bottom: 1px solid var(--eco-border);
-}
-
-.eco-filter .offcanvas-title {
-    width: 100%;
-    text-align: center;
+.eco-filter__heading {
+    margin-bottom: 20px;
     font-size: 15px;
     font-weight: 600;
     color: var(--eco-ink);
-}
-
-.eco-filter .offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-}
-
-.eco-filter__group {
-    margin: 0;
-    padding: 0;
-    border: 0;
 }
 
 .eco-filter__group + .eco-filter__group {
@@ -436,10 +418,7 @@ body {
 }
 
 .eco-filter__legend {
-    float: none;
-    width: auto;
     margin-bottom: 12px;
-    padding: 0;
     font-size: var(--eco-text-size);
     font-weight: 700;
     color: var(--eco-ink);
@@ -449,47 +428,67 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    max-width: 234px;
+    max-width: 200px;
 }
 
 .eco-filter__swatch {
-    width: 28px;
-    height: 28px;
-    padding: 0;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    background-color: var(--cor);
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
+.eco-filter__swatch input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .eco-filter__swatch:hover {
     transform: scale(1.08);
 }
 
-.eco-filter__swatch.is-active {
+.eco-filter__swatch:has(input:checked) {
     box-shadow: 0 0 0 2px var(--eco-surface), 0 0 0 3px var(--eco-ink);
 }
 
 .eco-filter__option {
-    display: block;
-    width: 100%;
-    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
     font-size: var(--eco-text-size);
     line-height: 20px;
     color: #8A8A8A;
-    text-align: left;
-    background: none;
-    border: 0;
     cursor: pointer;
     transition: color 0.12s ease;
 }
 
+.eco-filter__option input {
+    width: 14px;
+    height: 14px;
+    accent-color: var(--eco-ink);
+}
+
 .eco-filter__option:hover,
-.eco-filter__option.is-active {
+.eco-filter__option:has(input:checked) {
     color: var(--eco-ink);
 }
 
-.eco-filter__footer {
-    margin-top: auto;
-    padding-top: 28px;
+@media (max-width: 991.98px) {
+    .eco-filter {
+        padding-right: 0;
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--eco-border);
+    }
+
+    .eco-filter__swatches {
+        max-width: none;
+    }
 }
