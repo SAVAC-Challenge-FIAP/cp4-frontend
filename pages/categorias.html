@@ -17,13 +17,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Estilos do projeto -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos do projeto - .. para retornar 1 pasta -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 
-    <title>EcoTrend | Página Inicial</title>
+    <title>EcoTrend | Lista de Produtos </title>
 </head>
 
 <body>
@@ -111,104 +111,25 @@
     </header>
 
     <main>
-
-        <!-- ============================= HERO ============================= -->
-        <section class="eco-hero">
-            <img class="eco-hero__media" src="img/home/hero.png" alt="Modelo usando peças sustentáveis EcoTrend">
-            <div class="eco-hero__overlay"></div>
-            <div
-                class="eco-hero__inner container d-flex flex-column align-items-start justify-content-end gap-3 py-4 py-md-5">
-                <h1 class="eco-hero__title fw-normal text-white mb-0">
-                    Eleve seu estilo<br>
-                    Moda atemporal, escolhas<br>
-                    sustentáveis
-                </h1>
-                <a href="pages/categorias.html" class="btn btn-light eco-btn">Comprar Agora</a>
-            </div>
-        </section>
-
-        <!-- ========================== COLEÇÕES ========================== -->
-        <section class="eco-section">
-            <div class="container">
-                <p class="eco-section__lead mb-4">
-                    Eleve seu estilo de vida com um guarda-roupa mais inteligente e superior.
-                    Nossa linha é produzida de forma sustentável, pensada para durar.
-                </p>
-
-                <div class="row eco-collections">
-                    <div class="col-12 col-md-4">
-                        <a href="pages/categorias.html"
-                            class="eco-collection d-flex align-items-end text-decoration-none"
-                            style="background-image: url('img/home/colecao-novidades.png');">
-                            <span class="eco-collection__label w-100">Novidades</span>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="pages/categorias.html"
-                            class="eco-collection d-flex align-items-end text-decoration-none"
-                            style="background-image: url('img/home/colecao-casual.jpg');">
-                            <span class="eco-collection__label w-100">Estilo Casual</span>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="pages/categorias.html"
-                            class="eco-collection d-flex align-items-end text-decoration-none"
-                            style="background-image: url('img/home/colecao-mais-vendidos.jpg');">
-                            <span class="eco-collection__label w-100">Mais Vendidos</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
         <!-- ============================ PRODUTOS ============================ -->
         <section class="eco-section">
             <div class="container">
-                <p class="eco-section__title mb-4">O Que Vestir Agora</p>
+                <p class="eco-section__title mb-4">Shop</p>
 
+                <!-- COLUNAS X LINHAS -->
+                 <!-- GRID responsivo -->
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 eco-products">
+                    <!-- row-cols-2: para celular - mostra 2 colunas por linha -->
+                    <!-- row-cols-md-3: para telas médias (a partir de 768px), mostra 3 colunas por linha -->
+                    <!-- row-cols-lg-5: tela grande (a partir de 992px), mostra 5 colunas por linha -->
+
                     <div class="col">
+                        <!-- img1 -->
                         <a href="pages/categorias.html" class="eco-product text-decoration-none">
                             <span class="eco-product__media">
-                                <img src="img/home/produto-tote.png" alt="Bolsa Tote Clássica com Zíper">
-                                <span class="eco-product__plus" aria-hidden="true">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </span>
-                            <span class="eco-product__detail">
-                                <span class="eco-product__name">Bolsa Tote Clássica com Zíper</span>
-                                <span class="eco-product__price">R$ 298</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
-                            <span class="eco-product__media">
-                                <img src="img/home/produto-bolsa.png" alt="Bolsa Sanfonada para Celular">
-                                <span class="eco-product__plus" aria-hidden="true">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </span>
-                            <span class="eco-product__detail">
-                                <span class="eco-product__name">Bolsa Sanfonada para Celular</span>
-                                <span class="eco-product__price">R$ 248</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
-                            <span class="eco-product__media">
-                                <img src="img/home/produto-casaco.png" alt="Casaco Tricô de Lã e Cashmere">
+                                <!-- voltando 1 pasta,uso .. -->
+                                <img src="../img/home/produto-casaco.png" alt="Casaco Tricô de Lã e Cashmere">
                                 <span class="eco-product__plus" aria-hidden="true">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                                         <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
@@ -224,10 +145,56 @@
                             </span>
                         </a>
                     </div>
+
+
+                    <div class="col">
+                        <!-- img2 -->
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <img src="../img/home/produto-tote.png" alt="Bolsa Tote Clássica com Zíper">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Bolsa Tote Clássica com Zíper</span>
+                                <span class="eco-product__price">R$ 298</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- colocando outra coluna // img3 -->
+                    <div class="col">  
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <!-- voltando 1 pasta,uso .. -->
+                                <img src="../img/home/produto-bolsa.png" alt="Bolsa Sanfonada para Celular">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Bolsa Sanfonada para Celular</span>
+                                <span class="eco-product__price">R$ 248</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img4 -->
                     <div class="col">
                         <a href="pages/categorias.html" class="eco-product text-decoration-none">
                             <span class="eco-product__media">
-                                <img src="img/home/produto-touca.png" alt="Touca de Cashmere">
+                                <img src="../img/home/produto-touca.png" alt="Touca de Cashmere">
                                 <span class="eco-product__plus" aria-hidden="true">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                                         <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
@@ -243,10 +210,17 @@
                             </span>
                         </a>
                     </div>
+                    
+                </div>
+
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 eco-products">
+                    
+                    <!-- colocando outra coluna/ img5 -->
                     <div class="col">
                         <a href="pages/categorias.html" class="eco-product text-decoration-none">
                             <span class="eco-product__media">
-                                <img src="img/home/produto-cardigan.png" alt="Cardigan Cropped de Lã de Alpaca">
+                                <img src="../img/home/produto-cardigan.png" alt="Cardigan Cropped de Lã de Alpaca">
                                 <span class="eco-product__plus" aria-hidden="true">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                                         <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
@@ -262,7 +236,164 @@
                             </span>
                         </a>
                     </div>
+
+                    <!-- img6 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <!-- voltando 1 pasta,uso .. -->
+                                <img src="../img/home/colecao-casual.jpg" alt="Saia Nuvem da Primavera">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Saia Nuvem da Primavera</span>
+                                <span class="eco-product__price">R$ 500</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img7 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <img src="../img/home/produto-oversized.png" alt="Camisa em Linho">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Camisa em Linho Fino</span>
+                                <span class="eco-product__price">R$ 350</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img8 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <img src="../img/home/produto-saia.png" alt="Saia de Algodão Orgânico">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Saia de Algodão Orgânico</span>
+                                <span class="eco-product__price">R$ 600</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
+
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 eco-products">
+                   
+
+                    <!-- colocando outra coluna//img9 -->
+                    <div class="col">  
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <!-- voltando 1 pasta,uso .. -->
+                                <img src="../img/home/produto-gola.png" alt="Camiseta Manga Comprida Açaí">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Camiseta Manga Comprida Açaí</span>
+                                <span class="eco-product__price">R$ 379</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img10 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <!-- voltando 1 pasta,uso .. -->
+                                <img src="../img/home/produto-cashmere.png" alt="Casaco Tricô de Lã">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Casaco Tricô de Lã Fluffier</span>
+                                <span class="eco-product__price">R$ 530</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img11 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <img src="../img/home/produto-calca.png" alt="Shorts">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Shorts Abacate</span>
+                                <span class="eco-product__price">R$ 98</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- img12 -->
+                    <div class="col">
+                        <a href="pages/categorias.html" class="eco-product text-decoration-none">
+                            <span class="eco-product__media">
+                                <img src="../img/home/produto-saia2.png" alt="Saia">
+                                <span class="eco-product__plus" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.75 12H20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 3.75V20.25" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="eco-product__detail">
+                                <span class="eco-product__name">Saia Doce Verão </span>
+                                <span class="eco-product__price">R$ 248</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
