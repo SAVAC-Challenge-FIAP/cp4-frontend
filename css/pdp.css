@@ -48,3 +48,21 @@ body {
     min-width: 50px;
     min-height: 50px;
 }
+
+.produto-img {
+    grid-area: imagem;
+}
+
+.conteudo {
+    grid-area: conteudo;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 80px;
+        grid-template-areas:
+            "imagem conteudo";
+    }
+}
