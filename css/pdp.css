@@ -1,0 +1,68 @@
+:root {
+    --eco-ink: #000000;
+    --eco-surface: #FFFFFF;
+    --eco-border: #DDDDDD;
+    --eco-green: #2F6B3B;
+    --eco-cream: #F5F4F4;
+
+    --eco-font: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --eco-text-size: 13px;
+    --eco-text-line: 20px;
+
+    --eco-gutter: 32px;
+    --eco-gutter-sm: 16px;
+    --eco-container-max: 1280px;
+}
+
+body {
+    font-family: var(--eco-font);
+}
+
+#cores {
+    display: flex;
+    gap: 8px;
+}
+
+#cores button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#cor1 {
+    background-color: #F5F4F4;
+}
+
+#cor2 {
+    background-color: #000000;
+}
+
+#cor3 {
+    background-color: rgb(107, 107, 236);
+}
+
+.tamanho {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.produto-img {
+    grid-area: imagem;
+}
+
+.conteudo {
+    grid-area: conteudo;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 80px;
+        grid-template-areas:
+            "imagem conteudo";
+    }
+}
